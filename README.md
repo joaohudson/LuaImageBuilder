@@ -7,4 +7,8 @@
 - define the image height
 - define the name of the lua interpreter (example **lua** or **luajit**)
 
+## Dependencies:
+- Lua interpreter
+- JRE (1.8)
+
 <img src="example.jpg">
