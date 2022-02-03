@@ -1,7 +1,7 @@
 # Image Builder in Lua.
 ## Use mode:
 - implements the function 'imageBuilder' in 'main.lua'
-- execute build lua (example **lua main.lua** or **luajit main.lua**)
+- execute build lua (example **lua build.lua** or **luajit build.lua**)
 - define the name of output image
 - define the image width
 - define the image height
