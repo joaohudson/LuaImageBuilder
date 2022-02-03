@@ -1,6 +1,11 @@
 print("Image name:")
-name = io.read() .. ".jpg"
+io.flush()
+local image = io.read() .. ".jpg"
 
-os.execute("lua generator.lua")
-os.execute("java -jar PPMConverter.jar out.ppm " .. name)
-os.execute("del out.ppm")
+print("Lua interpreter name:")
+io.flush()
+local interpreter = io.read()
+
+os.execute(interpreter .. " lib/generator.lua")
+os.execute("java -jar lib/PPMConverter.jar out.ppm " .. image)
+os.remove("out.ppm")

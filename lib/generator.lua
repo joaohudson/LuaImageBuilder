@@ -34,41 +34,9 @@ function makeImage(width, height, call)
 	
 	return image
 end
---create new color for r,g,b normalized[0,1]
-function newColor(r, g, b)
-	r = math.floor(r * 255)
-	g = math.floor(g * 255)
-	b = math.floor(b * 255)
-	
-	r = math.min(math.max(r, 0), 255)
-	g = math.min(math.max(g, 0), 255)
-	b = math.min(math.max(b, 0), 255)
 
-	return {red = r, green = g, blue = b}
-end
---invoke for all pixels to generate image
-function imageBuilder(x, y, aspect)
-	
-	x = x - 0.5
-	y = y - 0.5
-	
-	local r = math.sqrt(x * x + y * y)
-	local teta = math.atan2(y, x)
-	
-	local l = 1 - math.sqrt(x * x + y * y) / math.sqrt(0.5)
-	
-	x = x + 0.5
-	y = y + 0.5
-	
-	local red = x * x * x * 1.5
-	local green = r * r * 4
-	local blue = (1 - r) * (1 - r) * 1.5
-	
-	l = l * l * l
-	local mask = (math.sin(teta * 16 + r * 64) * 0.5 + 0.5)
-	
-	return newColor(l * red * mask, l * green * mask, l * blue * mask)
-end
+local imageBuilder = require "main"
+
 --create image
 image = makeImage(1024, 1024, imageBuilder)
 --write image
