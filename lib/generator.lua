@@ -38,6 +38,6 @@ end
 local imageBuilder = require "main"
 
 --create image
-image = makeImage(1024, 1024, imageBuilder)
+image = makeImage(arg[1], arg[2], imageBuilder)
 --write image
 writeImage(image, "out")
