@@ -9,7 +9,7 @@ function imageBuilder(x, y, aspect)
 	y = y - 0.5
 	-- 1 - radius = bigger glow in the center
 	local l = 1 - math.sqrt(x*x + y*y)
-	-- l*l*l... = exponent that amplifies the focus of light
+	-- l*l*l... = the exponent amplifies the focus at the center
 	local r = l*l*l*l*l*l*l
 
 	return util.newColor(r,r,r)
