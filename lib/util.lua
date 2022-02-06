@@ -1,5 +1,5 @@
 --create new color for r,g,b normalized[0,1]
-function newColor(r, g, b)
+local function newColor(r, g, b)
 	r = math.floor(r * 255)
 	g = math.floor(g * 255)
 	b = math.floor(b * 255)
@@ -11,4 +11,6 @@ function newColor(r, g, b)
 	return {red = r, green = g, blue = b}
 end
 
-return newColor
+return {
+	newColor = newColor
+}

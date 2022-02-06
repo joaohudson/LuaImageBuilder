@@ -1,4 +1,4 @@
-require "lib/util"
+local util = require "lib/util"
 
 -- x - is horizontal coordinate between 0 and 1
 -- y - is vertical coordinate between 0 and 1
@@ -23,7 +23,7 @@ function imageBuilder(x, y, aspect)
 	l = l * l * l
 	local mask = (math.sin(teta * 16 + r * 64) * 0.5 + 0.5)
 	
-	return newColor(l * red * mask, l * green * mask, l * blue * mask)
+	return util.newColor(l * red * mask, l * green * mask, l * blue * mask)
 end
 
 return imageBuilder
