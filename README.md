@@ -11,8 +11,8 @@
 - Lua interpreter
 - JRE (1.8)
 
-### Image example
-<img src="example.jpg">
-
 ### Code example
 <img src="screenshots/Capturar.PNG">
+
+### Image example
+<img src="example.jpg">
