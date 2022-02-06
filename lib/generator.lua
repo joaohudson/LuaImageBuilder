@@ -27,7 +27,7 @@ function makeImage(width, height, call)
 		y = math.floor(i / width) + 1
 		
 		x = x / width
-		y = y / width
+		y = y / height
 		
 		image.data[i] = call(x, y, height / width)
 	end
